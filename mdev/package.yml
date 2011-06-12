@@ -1,0 +1,24 @@
+Package: python
+Version: 2.6.4
+Revision: 3
+Maintainer: Marmalade Package Team <packages@ideaworkslabs.com>
+Mkbs: python_lib.mkb
+Libraries: python
+Description:
+  Shared Python runtime library
+  High-level, interactive object oriented language, includes an extensive class
+  library with lots of goodies for network programming, system administration,
+  sounds and graphics.
+Contents:
+ - python_public.mkf: python.mkf
+ - upstream/Include: h
+ - pyconfig.h: h/pyconfig.h
+Contents-src:
+ - upstream/Modules/posixmodule.c
+ - upstream/Objects/fileobject.c
+ - upstream/Parser/intrcheck.c
+ - config.c
+ - preinclude.h
+ - pyconfig.h
+ - python.defines.txt
+ - python_lib.mkb

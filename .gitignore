@@ -1,0 +1,6 @@
+lib
+upstream
+build_*
+Python-*.tar.bz2
+python_*.msrc
+python_*.mdev

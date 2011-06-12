@@ -16,7 +16,7 @@
 #include <windows.h>
 #endif
 
-#ifdef _MSC_VER
+#if defined _MSC_VER && !defined __S3E__
 /* Need GetVersion to see if on NT so safe to use _wfopen */
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>

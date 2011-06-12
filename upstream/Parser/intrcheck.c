@@ -28,7 +28,7 @@ PyOS_InterruptOccurred(void)
 
 #endif /* QUICKWIN */
 
-#if defined(_M_IX86) && !defined(__QNX__)
+#if defined(_M_IX86) && !defined(__S3E__) && !defined(__QNX__)
 #include <io.h>
 #endif
 

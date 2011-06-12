@@ -120,7 +120,7 @@ corresponding Unix manual entries for more information on calls.");
 #define HAVE_SYSTEM	1
 #define HAVE_WAIT       1
 #else
-#ifdef _MSC_VER		/* Microsoft compiler */
+#if defined _MSC_VER && !defined __S3E__	/* Microsoft compiler */
 #define HAVE_GETCWD     1
 #define HAVE_SPAWNV	1
 #define HAVE_EXECV      1
@@ -258,7 +258,7 @@ extern int lstat(const char *, struct stat *);
 #endif
 #endif
 
-#ifdef _MSC_VER
+#if defined _MSC_VER && !defined __S3E__
 #ifdef HAVE_DIRECT_H
 #include <direct.h>
 #endif
@@ -367,7 +367,7 @@ extern int lstat(const char *, struct stat *);
 */
 #include <crt_externs.h>
 static char **environ;
-#elif !defined(_MSC_VER) && ( !defined(__WATCOMC__) || defined(__QNX__) )
+#elif (!defined(_MSC_VER) || defined(__S3E__)) && ( !defined(__WATCOMC__) || defined(__QNX__) )
 extern char **environ;
 #endif /* !_MSC_VER */
 
@@ -8997,7 +8997,7 @@ all_ins(PyObject *d)
 }
 
 
-#if (defined(_MSC_VER) || defined(__WATCOMC__) || defined(__BORLANDC__)) && !defined(__QNX__)
+#if (defined(_MSC_VER) || defined(__WATCOMC__) || defined(__BORLANDC__)) && !defined(__QNX__) && !defined (__S3E__)
 #define INITFUNC initnt
 #define MODNAME "nt"
 

@@ -1,0 +1,2 @@
+__rtems__ XX
+PY_LONG_LONG XX

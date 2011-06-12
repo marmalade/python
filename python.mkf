@@ -1,0 +1,26 @@
+library ".,python"
+
+upstream
+{
+    # origianl: http://www.python.org/ftp/python/2.5.4/Python-2.5.4.tar.bz2
+    url="http://source.ideaworks3d.com/upstream/Python-2.6.4.tar.bz2"
+    checkin=git
+}
+
+options
+{
+    compiler=gcc
+    preinclude="preinclude.h"
+}
+
+files
+{
+    python.defines.txt
+    preinclude.h
+}
+
+includepaths
+{
+    "upstream/Include"
+    .
+}
