@@ -1,19 +1,20 @@
-#!/usr/bin/env mkb
-target python
+upstream
+{
+    # origianl: http://www.python.org/ftp/python/2.5.4/Python-2.5.4.tar.bz2
+    url="http://source.ideaworks3d.com/upstream/Python-2.6.4.tar.bz2"
+    checkin=git
+}
 
 options
 {
-    lib
-}
-
-subproject
-{
-    python
+    compiler=gcc
+    preinclude="preinclude.h"
 }
 
 includepaths
 {
-    "upstream/Python"
+    "upstream/Include"
+    .
 }
 
 defines
@@ -24,6 +25,8 @@ defines
 files
 {
     (.)
+    python.defines.txt
+    preinclude.h
     pyconfig.h
     config.c
 
