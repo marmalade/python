@@ -163,9 +163,7 @@
 /* #undef HAVE_LIBUTIL_H */
 
 /* Define this if you have the type long long. */
-#ifndef _MSC_VER
 #define HAVE_LONG_LONG 1
-#endif
 
 /* Define to 1 if you have the `memmove' function. */
 #define HAVE_MEMMOVE 1
