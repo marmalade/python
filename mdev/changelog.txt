@@ -1,0 +1,6 @@
+python (2.6.4-5)
+
+  * Add changelog
+  * package.yml: remove Revision and Version fields.
+
+ -- Sam Clegg <sam@marmalademail.com>  Tue, 02 Aug 2011 23:56:23 +0000

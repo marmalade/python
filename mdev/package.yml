@@ -1,8 +1,6 @@
 Package: python
-Version: 2.6.4
-Revision: 4
 Maintainer: Marmalade Package Team <packages@ideaworkslabs.com>
-Mkbs: python_build.mkf
+Mkbs: python.mkb
 Libraries: python
 Description:
   Shared Python runtime library
@@ -21,5 +19,6 @@ Contents-Source:
  - preinclude.h
  - pyconfig.h
  - python.defines.txt
+ - python.mkb
  - python_build.mkf
  - python_public.mkf
