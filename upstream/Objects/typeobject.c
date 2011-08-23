@@ -6144,7 +6144,7 @@ update_one_slot(PyTypeObject *type, slotdef *p)
 			/* We specifically allow __hash__ to be set to None
 			   to prevent inheritance of the default
 			   implementation from object.__hash__ */
-			specific = PyObject_HashNotImplemented;
+			specific = (void*)PyObject_HashNotImplemented;
 		}
 		else {
 			use_generic = 1;
